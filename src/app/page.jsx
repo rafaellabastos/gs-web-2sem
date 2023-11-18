@@ -25,6 +25,8 @@ export default function Home() {
         </figure>
       </div>
 
+      <p>Saiba a taxa de vacinação das cidades</p>
+
       <div>
         <div>
           <Link href=''>Conheça as principais vacinas</Link>
