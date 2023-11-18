@@ -25,7 +25,9 @@ export default function Home() {
         </figure>
       </div>
 
-      <p>Saiba a taxa de vacinação das cidades</p>
+      <div className='botaoHome'>
+        <Link href='/acompanhar-casos'>Saiba a taxa de vacinação das cidades</Link>
+      </div>
 
       <div className='grupoPotes'>
         <div className='cardPotes'>
