@@ -10,11 +10,11 @@ export default function ConhecerVacinas() {
                 </div>
             </div> 
 
-            <h2>ImunoCheck</h2>
+            <h2 className="subtitulo">ImunoCheck</h2>
 
             <p className="texto2">Confira abaixo as vacinas necessárias na caderneta de todo cidadão brasileiro: </p>
 
-            <table>
+            <table className="tabela">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -113,7 +113,7 @@ export default function ConhecerVacinas() {
                         <td>13</td>
                         <td>HPV</td>
                         <td>HPV</td>
-                        <td>Meninas: a partir dos 9 anos/ Meninos: a partir dos 11 anos</td>
+                        <td>A partir dos 9 anos</td>
                     </tr>
 
                     <tr>
