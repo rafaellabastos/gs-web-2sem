@@ -30,8 +30,12 @@ export default function AcompanharCasos() {
 
     return (
         <>
-            <h1>Seja bem vindo</h1>
-            <Link href='/'>Home</Link>
+            <div className='cabecalhoConhecer'>
+                <h1>Seja bem vindo</h1>
+                <div>
+                    <Link href='/'>Home</Link>
+                </div>
+            </div>
 
             <h2>ImunoCheck</h2>
 
