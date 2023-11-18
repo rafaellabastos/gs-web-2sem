@@ -9,17 +9,17 @@ export default function Home() {
         <Link href=''>Cadastro</Link>
       </div>
 
-      <p>Por um mundo onde todos possam viver o que tiver para viver!</p>
+      <p className='texto1'>Por um mundo onde todos possam viver o que tiver para viver!</p>
 
-      <div>
-        <figure>
+      <div className='grupoVacina'>
+        <figure className='fotoVacina'>
           <Image src='/images/vacina.jpg'
             width={514}
             height={239}
             alt="Mão com uma agulha pegando a vacina dentro de um pote">
           </Image>
 
-          <div>
+          <div className='cardVacina'>
             <Link href=''>Venha ter um controle vacinal</Link>
           </div>
         </figure>
@@ -27,12 +27,12 @@ export default function Home() {
 
       <p>Saiba a taxa de vacinação das cidades</p>
 
-      <div>
-        <div>
+      <div className='grupoPotes'>
+        <div className='cardPotes'>
           <Link href=''>Conheça as principais vacinas</Link>
         </div>
 
-        <figure>
+        <figure className='fotoPotes'>
           <Image src='/images/vidrovacina.jpg'
             width={514}
             height={239}

@@ -12,7 +12,7 @@ export default function ConhecerVacinas() {
 
             <h2>ImunoCheck</h2>
 
-            <p>Confira abaixo as vacinas necessárias na caderneta de todo cidadão brasileiro: </p>
+            <p className="texto2">Confira abaixo as vacinas necessárias na caderneta de todo cidadão brasileiro: </p>
 
             <table>
                 <thead>

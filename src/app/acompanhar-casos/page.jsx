@@ -39,7 +39,7 @@ export default function AcompanharCasos() {
 
             <h2>ImunoCheck</h2>
 
-            <p>Selecione uma cidade e saiba quantas pessoas já se vacinaram ali</p>
+            <p className='texto2'>Selecione uma cidade e saiba quantas pessoas já se vacinaram ali</p>
 
             <div>
                 <h3>Taxa de vacinação</h3>
