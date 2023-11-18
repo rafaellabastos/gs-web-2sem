@@ -1,9 +1,5 @@
 {
-  "estados": [
-    {
-      "sigla": "AC",
-      "nome": "Acre",
-      "cidades": [
+  "cidades": [
         "Acrelândia",
         "Assis Brasil",
         "Brasiléia",
@@ -25,13 +21,7 @@
         "Sena Madureira",
         "Senador Guiomard",
         "Tarauacá",
-        "Xapuri"
-      ]
-    },
-    {
-      "sigla": "AL",
-      "nome": "Alagoas",
-      "cidades": [
+        "Xapuri",
         "Água Branca",
         "Anadia",
         "Arapiraca",
@@ -133,13 +123,7 @@
         "Teotônio Vilela",
         "Traipu",
         "União dos Palmares",
-        "Viçosa"
-      ]
-    },
-    {
-      "sigla": "AM",
-      "nome": "Amazonas",
-      "cidades": [
+        "Viçosa",
         "Alvarães",
         "Amaturá",
         "Anamã",
@@ -201,13 +185,7 @@
         "Tonantins",
         "Uarini",
         "Urucará",
-        "Urucurituba"
-      ]
-    },
-    {
-      "sigla": "AP",
-      "nome": "Amapá",
-      "cidades": [
+        "Urucurituba",
         "Amapá",
         "Calçoene",
         "Cutias",
@@ -223,13 +201,7 @@
         "Santana",
         "Serra do Navio",
         "Tartarugalzinho",
-        "Vitória do Jari"
-      ]
-    },
-    {
-      "sigla": "BA",
-      "nome": "Bahia",
-      "cidades": [
+        "Vitória do Jari",
         "Abaíra",
         "Abaré",
         "Acajutiba",
@@ -646,13 +618,7 @@
         "Wagner",
         "Wanderley",
         "Wenceslau Guimarães",
-        "Xique-Xique"
-      ]
-    },
-    {
-      "sigla": "CE",
-      "nome": "Ceará",
-      "cidades": [
+        "Xique-Xique",
         "Abaiara",
         "Acarape",
         "Acaraú",
@@ -836,13 +802,7 @@
         "Uruoca",
         "Varjota",
         "Várzea Alegre",
-        "Viçosa do Ceará"
-      ]
-    },
-    {
-      "sigla": "DF",
-      "nome": "Distrito Federal",
-      "cidades": [
+        "Viçosa do Ceará",
         "Águas Claras",
         "Arniqueira",
         "Brasília",
@@ -878,13 +838,7 @@
         "Sudoeste",
         "Taguatinga",
         "Varjão",
-        "Vicente Pires"
-      ]
-    },
-    {
-      "sigla": "ES",
-      "nome": "Espírito Santo",
-      "cidades": [
+        "Vicente Pires",
         "Afonso Cláudio",
         "Água Doce do Norte",
         "Águia Branca",
@@ -962,13 +916,7 @@
         "Vila Pavão",
         "Vila Valério",
         "Vila Velha",
-        "Vitória"
-      ]
-    },
-    {
-      "sigla": "GO",
-      "nome": "Goiás",
-      "cidades": [
+        "Vitória",
         "Abadia de Goiás",
         "Abadiânia",
         "Acreúna",
@@ -1214,13 +1162,7 @@
         "Vianópolis",
         "Vicentinópolis",
         "Vila Boa",
-        "Vila Propício"
-      ]
-    },
-    {
-      "sigla": "MA",
-      "nome": "Maranhão",
-      "cidades": [
+        "Vila Propício",
         "Açailândia",
         "Afonso Cunha",
         "Água Doce do Maranhão",
@@ -1437,13 +1379,7 @@
         "Vila Nova dos Martírios",
         "Vitória do Mearim",
         "Vitorino Freire",
-        "Zé Doca"
-      ]
-    },
-    {
-      "sigla": "MG",
-      "nome": "Minas Gerais",
-      "cidades": [
+        "Zé Doca",
         "Abadia dos Dourados",
         "Abaeté",
         "Abre Campo",
@@ -2296,13 +2232,7 @@
         "Virgolândia",
         "Visconde do Rio Branco",
         "Volta Grande",
-        "Wenceslau Braz"
-      ]
-    },
-    {
-      "sigla": "MS",
-      "nome": "Mato Grosso do Sul",
-      "cidades": [
+        "Wenceslau Braz",
         "Água Clara",
         "Alcinópolis",
         "Amambaí",
@@ -2379,13 +2309,7 @@
         "Taquarussu",
         "Terenos",
         "Três Lagoas",
-        "Vicentina"
-      ]
-    },
-    {
-      "sigla": "MT",
-      "nome": "Mato Grosso",
-      "cidades": [
+        "Vicentina",
         "Acorizal",
         "Água Boa",
         "Alta Floresta",
@@ -2524,13 +2448,7 @@
         "Várzea Grande",
         "Vera",
         "Vila Bela da Santíssima Trindade",
-        "Vila Rica"
-      ]
-    },
-    {
-      "sigla": "PA",
-      "nome": "Pará",
-      "cidades": [
+        "Vila Rica",
         "Abaetetuba",
         "Abel Figueiredo",
         "Acará",
@@ -2673,13 +2591,7 @@
         "Vigia",
         "Viseu",
         "Vitória do Xingu",
-        "Xinguara"
-      ]
-    },
-    {
-      "sigla": "PB",
-      "nome": "Paraíba",
-      "cidades": [
+        "Xinguara",
         "Água Branca",
         "Aguiar",
         "Alagoa Grande",
@@ -2902,13 +2814,7 @@
         "Várzea",
         "Vieirópolis",
         "Vista Serrana",
-        "Zabelê"
-      ]
-    },
-    {
-      "sigla": "PE",
-      "nome": "Pernambuco",
-      "cidades": [
+        "Zabelê",
         "Abreu e Lima",
         "Afogados da Ingazeira",
         "Afrânio",
@@ -3093,13 +2999,7 @@
         "Vertentes",
         "Vicência",
         "Vitória de Santo Antão",
-        "Xexéu"
-      ]
-    },
-    {
-      "sigla": "PI",
-      "nome": "Piauí",
-      "cidades": [
+        "Xexéu",
         "Acauã",
         "Agricolândia",
         "Água Branca",
@@ -3321,13 +3221,7 @@
         "Várzea Grande",
         "Vera Mendes",
         "Vila Nova do Piauí",
-        "Wall Ferraz"
-      ]
-    },
-    {
-      "sigla": "PR",
-      "nome": "Paraná",
-      "cidades": [
+        "Wall Ferraz",
         "Abatiá",
         "Adrianópolis",
         "Agudos do Sul",
@@ -3726,13 +3620,7 @@
         "Virmond",
         "Vitorino",
         "Wenceslau Braz",
-        "Xambrê"
-      ]
-    },
-    {
-      "sigla": "RJ",
-      "nome": "Rio de Janeiro",
-      "cidades": [
+        "Xambrê",
         "Angra dos Reis",
         "Aperibé",
         "Araruama",
@@ -3824,13 +3712,7 @@
         "Valença",
         "Varre-Sai",
         "Vassouras",
-        "Volta Redonda"
-      ]
-    },
-    {
-      "sigla": "RN",
-      "nome": "Rio Grande do Norte",
-      "cidades": [
+        "Volta Redonda",
         "Acari",
         "Açu",
         "Afonso Bezerra",
@@ -3997,13 +3879,7 @@
         "Venha-Ver",
         "Vera Cruz",
         "Viçosa",
-        "Vila Flor"
-      ]
-    },
-    {
-      "sigla": "RO",
-      "nome": "Rondônia",
-      "cidades": [
+        "Vila Flor",
         "Alta Floresta d'Oeste",
         "Alto Alegre do Parecis",
         "Alto Paraíso",
@@ -4055,13 +3931,7 @@
         "Urupá",
         "Vale do Anari",
         "Vale do Paraíso",
-        "Vilhena"
-      ]
-    },
-    {
-      "sigla": "RR",
-      "nome": "Roraima",
-      "cidades": [
+        "Vilhena",
         "Alto Alegre",
         "Amajari",
         "Boa Vista",
@@ -4076,13 +3946,7 @@
         "Rorainópolis",
         "São João da Baliza",
         "São Luiz",
-        "Uiramutã"
-      ]
-    },
-    {
-      "sigla": "RS",
-      "nome": "Rio Grande do Sul",
-      "cidades": [
+        "Uiramutã",
         "Aceguá",
         "Água Santa",
         "Agudo",
@@ -4578,13 +4442,7 @@
         "Vista Gaúcha",
         "Vitória das Missões",
         "Westfália",
-        "Xangri-lá"
-      ]
-    },
-    {
-      "sigla": "SC",
-      "nome": "Santa Catarina",
-      "cidades": [
+        "Xangri-lá",
         "Abdon Batista",
         "Abelardo Luz",
         "Agrolândia",
@@ -4877,13 +4735,7 @@
         "Xanxerê",
         "Xavantina",
         "Xaxim",
-        "Zortéa"
-      ]
-    },
-    {
-      "sigla": "SE",
-      "nome": "Sergipe",
-      "cidades": [
+        "Zortéa",
         "Amparo de São Francisco",
         "Aquidabã",
         "Aracaju",
@@ -4958,13 +4810,7 @@
         "Telha",
         "Tobias Barreto",
         "Tomar do Geru",
-        "Umbaúba"
-      ]
-    },
-    {
-      "sigla": "SP",
-      "nome": "São Paulo",
-      "cidades": [
+        "Umbaúba",
         "Adamantina",
         "Adolfo",
         "Aguaí",
@@ -5609,13 +5455,7 @@
         "Vitória Brasil",
         "Votorantim",
         "Votuporanga",
-        "Zacarias"
-      ]
-    },
-    {
-      "sigla": "TO",
-      "nome": "Tocantins",
-      "cidades": [
+        "Zacarias",
         "Abreulândia",
         "Aguiarnópolis",
         "Aliança do Tocantins",
@@ -5755,7 +5595,5 @@
         "Tupiratins",
         "Wanderlândia",
         "Xambioá"
-      ]
-    }
   ]
 }

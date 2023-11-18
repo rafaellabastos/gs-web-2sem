@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function AcompanharCasos() {
     const [loading, setLoading] = useState(true);
-    const [data, setData] = useState({estados: [] });
+    const [data, setData] = useState({cidades: [] });
 
     useEffect(() => {
         fetch('/cidades.json')
@@ -17,13 +17,11 @@ export default function AcompanharCasos() {
                 defaultOption.text = 'Selecione uma cidade';
                 selectCidade.appendChild(defaultOption);
 
-                data.estados.forEach(estado => {
-                    estado.cidades.forEach(cidade => {
-                        const option = document.createElement('option');
-                        option.value = cidade;
-                        option.text = cidade;
-                        selectCidade.appendChild(option);
-                    });
+                data.cidades.forEach(cidade => {
+                    const option = document.createElement('option');
+                    option.value = cidade;
+                    option.text = cidade;
+                    selectCidade.appendChild(option);
                 });
                 setLoading(false);
             })
@@ -46,10 +44,8 @@ export default function AcompanharCasos() {
                         <label htmlFor="city">Nome da cidade:</label>
                         <select id="city">
                             <option value="">Selecione uma cidade</option>
-                            {data.estados.map(estado => (
-                                estado.cidades.map(cidade => (
-                                    <option key={cidade} value={cidade}>{cidade}</option>
-                                ))
+                            {data.cidades.map(cidade => (
+                                <option key={cidade} value={cidade}>{cidade}</option>
                             ))}
                         </select>
 
