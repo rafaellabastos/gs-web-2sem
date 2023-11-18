@@ -8,12 +8,12 @@ export default function Login() {
             <form>
                 <div>
                     <label htmlFor="username">Usuário:</label>
-                    <input type="text" id="username" value={username} />
+                    <input type="text" id="username"/>
                 </div>
 
                 <div>
                     <label htmlFor="password">Senha:</label>
-                    <input type="password" id="password" value={password}/>
+                    <input type="password" id="password"/>
                 </div>
 
                 <div>
