@@ -4,9 +4,9 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <>
-      <div>
-        <p>Login</p>
-        <p>Cadastro</p>
+      <div className='cabecalhoHome'>
+        <Link href=''>Login</Link>
+        <Link href=''>Cadastro</Link>
       </div>
 
       <p>Por um mundo onde todos possam viver o que tiver para viver!</p>
