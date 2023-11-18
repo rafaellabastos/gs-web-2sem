@@ -1,6 +1,4 @@
-import Link from "next/link";
-
-export default function ConhecerVacinas() {
+export default function ManipularVacinas() {
     return (
         <>
             <h1>Seja bem vindo!</h1>
@@ -8,7 +6,7 @@ export default function ConhecerVacinas() {
 
             <h2>ImunoCheck</h2>
 
-            <p>Confira abaixo as vacinas necessárias na caderneta de todo cidadão brasileiro: </p>
+            <p>Clique na linha da vacina para inserir, excluir ou alterar uma informação: </p>
 
             <table>
                 <thead>
@@ -17,6 +15,7 @@ export default function ConhecerVacinas() {
                         <th>Nome da vacina</th>
                         <th>Proteção</th>
                         <th>Quando tomar</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
 
@@ -26,6 +25,7 @@ export default function ConhecerVacinas() {
                         <td>BCG</td>
                         <td>Tuberculose</td>
                         <td>Infância</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -33,6 +33,7 @@ export default function ConhecerVacinas() {
                         <td>Hepatite B</td>
                         <td>Hepatite B</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -40,6 +41,7 @@ export default function ConhecerVacinas() {
                         <td>Pentavalente</td>
                         <td>DTP, Hib e HBV</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -47,6 +49,7 @@ export default function ConhecerVacinas() {
                         <td>VIP/VOP</td>
                         <td>Poliomelite</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -54,6 +57,7 @@ export default function ConhecerVacinas() {
                         <td>Pneumocócica 10-valente</td>
                         <td>Doenças pulmonares</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -61,6 +65,7 @@ export default function ConhecerVacinas() {
                         <td>Meningicócica C</td>
                         <td>Meningococo</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -68,6 +73,7 @@ export default function ConhecerVacinas() {
                         <td>Rotavírus</td>
                         <td>Rotavírus</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -75,6 +81,7 @@ export default function ConhecerVacinas() {
                         <td>Tríplice viral</td>
                         <td>Sarampo, caxumba e rubéola</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -82,6 +89,7 @@ export default function ConhecerVacinas() {
                         <td>Hepatite A</td>
                         <td>Hepatite A</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -89,6 +97,7 @@ export default function ConhecerVacinas() {
                         <td>DTP</td>
                         <td>Difteria, tétano e coqueluche</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -96,6 +105,7 @@ export default function ConhecerVacinas() {
                         <td>Varicela</td>
                         <td>Catapora</td>
                         <td>Infantil</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -103,6 +113,7 @@ export default function ConhecerVacinas() {
                         <td>Febre amarela</td>
                         <td>Febre amarela</td>
                         <td>A partir dos 9 meses</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -110,6 +121,7 @@ export default function ConhecerVacinas() {
                         <td>HPV</td>
                         <td>HPV</td>
                         <td>Meninas: a partir dos 9 anos/ Meninos: a partir dos 11 anos</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -117,6 +129,7 @@ export default function ConhecerVacinas() {
                         <td>Hepatite B</td>
                         <td>Hepatite B</td>
                         <td>Adolescência</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -124,6 +137,7 @@ export default function ConhecerVacinas() {
                         <td>Tríplice viral</td>
                         <td>Sarampo, caxumba e rubéola</td>
                         <td>Adolescência</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -131,6 +145,7 @@ export default function ConhecerVacinas() {
                         <td>Tríplice viral</td>
                         <td>Sarampo, caxumba e rubéola</td>
                         <td>Adulto</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -138,6 +153,7 @@ export default function ConhecerVacinas() {
                         <td>Dupla adulto</td>
                         <td>Difteria e tétano</td>
                         <td>Adulto</td>
+                        <td></td>
                     </tr>
 
                     <tr>
@@ -145,9 +161,10 @@ export default function ConhecerVacinas() {
                         <td>Influenza</td>
                         <td>Gripe</td>
                         <td>Anual</td>
+                        <td></td>
                     </tr>
                 </tbody>
-            </table>             
+            </table> 
         </>
     )
 }
