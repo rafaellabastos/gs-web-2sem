@@ -61,12 +61,12 @@
 
                 <p className='texto2'>Selecione uma cidade e saiba quantas pessoas já se vacinaram ali</p>
 
-                <div>
+                <div className='cardTaxa'>
                     <h3>Taxa de vacinação</h3>
 
-                    <div className='escolherEstado'>
-                        <label htmlFor="state">Nome do estado:</label>
-                        <select id="state">
+                    <div>
+                        <label htmlFor="state">Nome do estado:</label><br/>
+                        <select id="state" className='opcoesEstado'>
                             <option value="">Selecione um estado</option>
                             {estados.map(estado => (
                             <option key={estado.nome} value={estado.nome}>{estado.nome}</option>
