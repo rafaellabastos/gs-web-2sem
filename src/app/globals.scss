@@ -1,0 +1,426 @@
+.cabecalhoHome {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    height: 129.671px;
+    flex-shrink: 0;
+    background: #9FC075;
+
+    a {
+        margin: 100px;
+        text-decoration: none;
+        color: #FFF;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    a:hover {
+        color: white;
+        background-color: rgb(6, 72, 27);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.cabecalhoConhecer {
+    width: 100%;
+    height: 159px;
+    flex-shrink: 0;
+    background: #9FC075;
+
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    h1 {
+        font-size: 50px;
+        text-align: center;
+        padding-top: 45px;
+    }
+
+    div {
+        font-size: 25px;
+        text-align: end;
+        margin-top: -75px;
+        padding-right: 25px;
+
+        a {
+            text-decoration: none;
+            color: #FFF;
+        }
+    }
+}
+
+.cabecalhoTitulo {
+    width: 100%;
+    height: 130px;
+    flex-shrink: 0;
+    background: #9FC075;
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-top: 30px;
+    margin-bottom: 45px;
+
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+    a:hover {
+        color: white;
+        background-color: rgb(6, 72, 27);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+.texto1 {
+    color: #000;
+    text-align: center;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.texto2 {
+    color: #000;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: start;
+}
+
+.botaoHome {
+    width: 500px;
+    height: 105px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #667C4B;
+    padding-top: 13px;
+
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-style: normal;
+    font-size: 35px;
+    line-height: normal;
+    font-weight: 400;
+
+    margin: auto;
+
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+
+    &:hover {
+        background-color: rgb(125, 213, 125);
+    }
+}
+
+.subtitulo {
+    width: 275px;
+    height: 70px;
+    flex-shrink: 0;
+    border-radius: 0px 30px 30px 0px;
+    background: #879773;
+    padding-top: 10px;
+    text-indent: 10px;
+
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.tabela {
+    width: 1000px;
+    height: 1604.007px;
+    flex-shrink: 0;
+
+    border-collapse: collapse;
+    margin: auto;
+    margin-bottom: 50px;
+
+    td, th {
+        border-bottom: 1px solid #000000;
+        padding: 8px;
+        text-align: center;
+    }
+
+    th {
+        background-color: #816c6c;
+        color: #fdfdfd;
+    }
+    
+    td {
+        background-color: #D9D9D9;
+        color: #000;
+    }
+
+    tr:hover td {
+        background-color: rgb(132, 215, 155);
+    }
+}
+
+.cardTaxa {
+    width: 550px;
+    height: 370px;
+    flex-shrink: 0;
+    
+    margin: 0 auto;
+    background: #D9D9D9;
+    text-indent: 15px;
+    margin-bottom: 25px;
+    flex-direction: column;
+    
+    h3 {
+        color: #000;
+        text-align: center;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        padding-top: 45px;
+    }
+
+    label {
+        color: #000;
+        text-align: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    .opcoesEstado {
+        text-align: center;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 10px;
+        border-radius: 10px;
+        background: #9DCAA7;
+        padding-right: 150px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-left: 15px;
+    }
+
+    .enviarEstado {
+        width: 90px;
+        height: 50px;
+        flex-shrink: 0;
+
+        border-radius: 10px;
+        background: #9DCAA7;
+
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin-top: 30px;
+    }
+}
+
+.cardLogin {
+    width: 480px;
+    height: 340px;
+    flex-shrink: 0;
+
+    margin: 0 auto;
+    background: #D9D9D9;
+    text-indent: 30px;
+    margin-bottom: 30px;
+
+    label {
+        color: #000;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    input {
+        width: 400px;
+        height: 30px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: #FFF;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    button {
+        width: 90px;
+        height: 50px;
+        flex-shrink: 0;
+
+        border-radius: 10px;
+        background: #9DCAA7;
+
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin-top: 30px;
+    }
+}
+
+.tituloLogin {
+    width: 400px;
+    height: 80px;
+    flex-shrink: 0;
+
+    border-radius: 30px;
+    background: #879773;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 15px;
+
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.cardCadastro {
+    width: 480px;
+    height: 590px;
+    flex-shrink: 0;
+
+    margin: 0 auto;
+    background: #D9D9D9;
+    text-indent: 30px;
+    margin-bottom: 30px;
+
+    label {
+        color: #000;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    input {
+        width: 400px;
+        height: 25px;
+        flex-shrink: 0;
+
+        border-radius: 10px;
+        background: #FFF;
+        margin-top: 15px;
+        margin-left: 20px;
+    }
+
+    button {
+        width: 120px;
+        height: 50px;
+        flex-shrink: 0;
+
+        border-radius: 10px;
+        background: #9DCAA7;
+
+        color: #000;
+        text-align: center;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        margin-top: 30px;
+    }
+}
+
+.grupoVacina {
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.cardVacina {
+    width: 100%;
+    height: 239px;
+    flex-shrink: 0;
+
+    background-color: #879773;
+    stroke-width: 1px;
+    stroke: #000000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    a {
+        color: #FFF;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+    }
+}
+
+.grupoPotes {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 40px;
+}
+
+.cardPotes {
+    width: 100%;
+    height: 239px;
+    flex-shrink: 0;
+    background-color: #879773;
+    stroke-width: 1px;
+    stroke: #000;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    & a {
+        color: #FFF;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-decoration: none;
+    }
+}

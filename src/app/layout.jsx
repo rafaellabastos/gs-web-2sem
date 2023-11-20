@@ -1,6 +1,7 @@
 import { Inter } from 'next/font/google'
-import './globals.css'
+import './globals.scss'
 import Link from 'next/link'
+import Rodape from '../components/Rodape/page'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Link href='/'></Link>
         {children}
+        <Rodape/>
       </body>
     </html>
   )
