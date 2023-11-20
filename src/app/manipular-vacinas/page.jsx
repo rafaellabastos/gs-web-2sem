@@ -10,11 +10,11 @@ export default function ManipularVacinas() {
                 </div>
             </div>
 
-            <h2>ImunoCheck</h2>
+            <h2 className='subtitulo'>ImunoCheck</h2>
 
             <p className='texto2'>Clique na linha da vacina para inserir, excluir ou alterar uma informação: </p>
 
-            <table>
+            <table className='tabela'>
                 <thead>
                     <tr>
                         <th>ID</th>
