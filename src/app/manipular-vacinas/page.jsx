@@ -126,7 +126,7 @@ export default function ManipularVacinas() {
                         <td>13</td>
                         <td>HPV</td>
                         <td>HPV</td>
-                        <td>Meninas: a partir dos 9 anos/ Meninos: a partir dos 11 anos</td>
+                        <td>A partir dos 9 anos</td>
                         <td></td>
                     </tr>
 
