@@ -5,24 +5,16 @@ export default function Home() {
   return (
     <>
       <div className='cabecalhoHome'>
-        <Link href=''>Login</Link>
-        <Link href=''>Cadastro</Link>
+        <Link href='/login'>Login</Link>
+        <Link href='/cadastro'>Cadastro</Link>
       </div>
 
       <p className='texto1'>Por um mundo onde todos possam viver o que tiver para viver!</p>
 
       <div className='grupoVacina'>
-        <figure className='fotoVacina'>
-          <Image src='/images/vacina.jpg'
-            width={514}
-            height={239}
-            alt="Mão com uma agulha pegando a vacina dentro de um pote">
-          </Image>
-
           <div className='cardVacina'>
-            <Link href=''>Venha ter um controle vacinal</Link>
+            <Link href='/login'>Venha ter um controle vacinal</Link>
           </div>
-        </figure>
       </div>
 
       <div className='botaoHome'>
@@ -31,16 +23,8 @@ export default function Home() {
 
       <div className='grupoPotes'>
         <div className='cardPotes'>
-          <Link href=''>Conheça as principais vacinas</Link>
+          <Link href='/conhecer-vacinas'>Conheça as principais vacinas</Link>
         </div>
-
-        <figure className='fotoPotes'>
-          <Image src='/images/vidrovacina.jpg'
-            width={514}
-            height={239}
-            alt="Muitos potes de vacina enfileirados">
-          </Image>
-        </figure>
       </div>
     </>    
   )
