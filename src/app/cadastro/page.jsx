@@ -1,6 +1,54 @@
+"use client"
 import Link from 'next/link';
+import { useState } from 'react';
+import { headers } from '../../../next.config';
 
 export default function Cadastro() {
+    const [nomeCompleto, setNomeCompleto] = useState("");
+    const [idade, setIdade] = useState(0);
+    const [estado, setEstado] = useState("");
+    const [usuario, setUsuario] = useState("");
+    const [senha, setSenha] = useState("");
+    const [novoCadastro, setNovoCadastro] = useState({
+        nome : "",
+        idade: 0,
+        estado: "",
+        usuario: "",
+        senha: ""
+    });
+
+    const handleChange = ((e) => {
+        e.preventDefault()
+       setNovoCadastro((prevCadastro) => ({
+            ...prevCadastro,
+            nome : nomeCompleto,
+            idade : idade,
+            estado: estado,
+            usuario: usuario,
+            senha: e.target.value
+        }))
+    })
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        try {
+            const response = await fetch(`http://localhost:8080/imunocheck/`, {
+            method: "post",
+            headers: {
+                "Content-Type" : "application/json",
+            },
+            body:  JSON.stringify(novoCadastro)
+        })
+        if (response.ok){
+            console.log("Cadastrado com sucesso!")
+        }
+        else{
+            console.log("Erro ao cadastrar")
+        }
+        } catch (error) {
+            console.log("Erro ao cadastrar: " + error)
+        }
+    }
     return (
         <>
             <div className="cabecalhoTitulo">
@@ -9,34 +57,34 @@ export default function Cadastro() {
 
             <h2 className='tituloLogin'>CADASTRO</h2>
                 
-            <form className='cardCadastro'>
+            <form className='cardCadastro' onChange={handleChange}>
                 <br/><div>
                     <label htmlFor="name">Nome completo:</label><br/>
-                    <input type="text" id="name"/>
+                    <input type="text" id="name" onChange={(e) => setNomeCompleto(e.target.value)}/>
                 </div>
 
                 <br/><div>
                     <label htmlFor="age">Idade:</label><br/>
-                    <input type="text" id="age"/>
+                    <input type="text" id="age" onChange={(e) => setIdade(e.target.value)}/>
                 </div>
 
                 <br/><div>
-                    <label htmlFor="city">Cidade:</label><br/>
-                    <input type="text" id="city"/>
+                    <label htmlFor="city">Estado:</label><br/>
+                    <input type="text" id="city" onChange={(e) => setEstado(e.target.value)}/>
                 </div>
             
                 <br/><div>
                     <label htmlFor="username">Usuário:</label><br/>
-                    <input type="text" id="username"/>
+                    <input type="text" id="username" onChange={(e) => setUsuario(e.target.value)}/>
                 </div>
                 
                 <br/><div>
                     <label htmlFor="password">Senha:</label><br/>
-                    <input type="password" id="password"/>
+                    <input type="password" id="password" onChange={(e) => setSenha(e.target.value)}/>
                 </div>
                 
                 <div>
-                    <button type="submit">Cadastrar</button>
+                    <button type="submit" onClick={handleSubmit}>Cadastrar</button>
                 </div>
             </form>
         </>
