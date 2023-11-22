@@ -1,18 +1,16 @@
-import Link from 'next/link'
-import React, { useState } from 'react';
-// import ModalDesejo from './ModalDesejo';
-// import './ModalDesejo.css'
+"use client";
+
+import Link from 'next/link';
+import ModalDesejo from '../../components/ModalDesejo/ModalDesejo';
+import { useState } from 'react';
 
 export default function ManipularVacinas() {
-    // const [modalOpen, setModalOpen] = useState(false);
 
-    // const handleButtonClick = () => {
-    //     setModalOpen(true);
-    // }
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // const handleCloseModal = () => {
-    //     setModalOpen(false);
-    // }
+    const handleCheckButtonClick = () => {
+        setIsModalOpen(true);
+    }
 
     return (
         <>
@@ -27,9 +25,9 @@ export default function ManipularVacinas() {
 
             <p className='texto2'>Clique no botão para para inserir, excluir ou alterar uma informação: </p>
 
-            <button type='submit'>Check</button>
+            <button type='submit' className='escolherDesejo' onClick={handleCheckButtonClick}>Check</button>
 
-            {/* <ModalDesejo open={modalOpen} onClose={handleCloseModal}/> */}
+            {isModalOpen && <ModalDesejo setOpen={setIsModalOpen}></ModalDesejo>}
 
             <table className='tabela'>
                 <thead>
