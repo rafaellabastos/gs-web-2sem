@@ -6,41 +6,73 @@
         const [loading, setLoading] = useState(false);
         const [mostrar, setMostrar] = useState(false); 
         const [estado, setEstado] = useState("");
-        const [dados, setDados] = useState({
-            estado: "",
-            id: ""
-        })
-        const [id, setId] = useState("")
-        const contador = 2
-        console.log(estado)
+        const [counter1, setCounter1] = useState("")
+        const [counter2, setCounter2] = useState("")
+        const [counter3, setCounter3] = useState("")
+        const [counter4, setCounter4] = useState("")
+        const [counter5, setCounter5] = useState("")
+        const [counter6, setCounter6] = useState("")
+        const [counter7, setCounter7] = useState("")
+        const [counter8, setCounter8] = useState("")
+        const [counter9, setCounter9] = useState("")
+        const [counter10, setCounter10] = useState("")
+        const [counter11, setCounter11] = useState("")
+        const [counter12, setCounter12] = useState("")
+        const [counter13, setCounter13] = useState("")
+        const [counter14, setCounter14] = useState("")
+        const [counter15, setCounter15] = useState("")
+        const [counter16, setCounter16] = useState("")
+        const [counter17, setCounter17] = useState("")
+        const [counter18, setCounter18] = useState("")
 
         const handleChange = ((event) => {
             setEstado(event.target.value)
             const dadosEstados = estados.find(item => item.nome === estado)
-            const idVac = dadosEstados ? dadosEstados.id
-
-            setId(idVac.id)
-            console.log(id)
-
         })
         const handleSubmit = (() => {
+            setMostrar(true)
             fetch(`http://localhost:8080/imunocheck/vacinas`, {
                 method: "get"
             }).then((resp) => resp.json())
             .then((resp) => {
                 const tabelaVac = resp;
-                setDados((prevDados) => ({
-                       ...prevDados,
-                    estado: estado,
-                    id : id
-                }))
-                const estadoVac = tabelaVac.filter(item => item.estado === estado)
-                tabelaVac.find((idVacina) => setId(idVacina.id) )
-                if (estadoVac == estado && id ) {
-                    
-                } else {
-                    
-                }
+                const dadosVac1= tabelaVac.filter(item => item.estadoVac === estado && item.id === 1)
+                setCounter1(dadosVac1.length)
+                const dadosVac2 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 2)
+                setCounter2 (dadosVac2.length)
+                const dadosVac3 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 3)
+                setCounter3 (dadosVac3.length)
+                const dadosVac4 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 4)
+                setCounter4 (dadosVac4.length)
+                const dadosVac5 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 5)
+                setCounter5 (dadosVac5.length)
+                const dadosVac6 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 6)
+                setCounter6 (dadosVac6.length)
+                const dadosVac7 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 7)
+                setCounter7 (dadosVac7.length)
+                const dadosVac8 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 8)
+                setCounter8 (dadosVac8.length)
+                const dadosVac9 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 9)
+                setCounter9 (dadosVac9.length)
+                const dadosVac10 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 10)
+                setCounter10 (dadosVac10.length)
+                const dadosVac11 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 11)
+                setCounter11 (dadosVac11.length)
+                const dadosVac12 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 12)
+                setCounter12 (dadosVac12.length)
+                const dadosVac13 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 13)
+                setCounter13 (dadosVac13.length)
+                const dadosVac14 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 14)
+                setCounter14 (dadosVac14.length)
+                const dadosVac15 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 15)
+                setCounter15 (dadosVac15.length)
+                const dadosVac16 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 16)
+                setCounter16 (dadosVac16.length)
+                const dadosVac17 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 17)
+                setCounter17 (dadosVac17.length)
+                const dadosVac18 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 18)
+                setCounter18 (dadosVac18.length)
+
             })
         })
 
@@ -53,7 +85,7 @@
         }
 
         const estados = [
-            {nome: "Acre", id: 1},
+            {nome: "Acre"},
             {nome: "Alagoas"},
             {nome: "Amapá"},
             {nome: "Amazonas"},
@@ -82,9 +114,6 @@
             {nome: "Tocantins"}
         ]
 
-        const handleEnviar = () => {
-            setMostrar(true);
-        }
 
         return (
             <>
@@ -112,7 +141,7 @@
                         </select>
                             
                         <div>
-                            <button type='submit' onClick={handleEnviar} className='enviarEstado'>Enviar</button>
+                            <button type='submit' onClick={handleSubmit} className='enviarEstado'>Enviar</button>
                         </div>
                     </div>
                 </div>
@@ -133,126 +162,126 @@
                                 <td>1</td>
                                 <td>BCG</td>
                                 <td>Tuberculose</td>
-                                <td>{contador}</td>
+                                <td>{counter1}</td>
                             </tr>
 
                             <tr>
                                 <td>2</td>
                                 <td>Hepatite B</td>
                                 <td>Hepatite B</td>
-                                <td>{contador}</td>
+                                <td>{counter2}</td>
                             </tr>
 
                             <tr>
                                 <td>3</td>
                                 <td>Pentavalente</td>
                                 <td>DTP, Hib e HBV</td>
-                                <td>{contador}</td>
+                                <td>{counter3}</td>
                             </tr>
 
                             <tr>
                                 <td>4</td>
                                 <td>VIP/VOP</td>
                                 <td>Poliomelite</td>
-                                <td>{contador}</td>
+                                <td>{counter4}</td>
                             </tr>
 
                             <tr>
                                 <td>5</td>
                                 <td>Pneumocócica 10-valente</td>
                                 <td>Doenças pulmonares</td>
-                                <td>{contador}</td>
+                                <td>{counter5}</td>
                             </tr>
 
                             <tr>
                                 <td>6</td>
                                 <td>Meningicócica C</td>
                                 <td>Meningococo</td>
-                                <td>{contador}</td>
+                                <td>{counter6}</td>
                             </tr>
 
                             <tr>
                                 <td>7</td>
                                 <td>Rotavírus</td>
                                 <td>Rotavírus</td>
-                                <td>{contador}</td>
+                                <td>{counter7}</td>
                             </tr>
 
                             <tr>
                                 <td>8</td>
                                 <td>Tríplice viral</td>
                                 <td>Sarampo, caxumba e rubéola</td>
-                                <td>{contador}</td>
+                                <td>{counter8}</td>
                             </tr>
 
                             <tr>
                                 <td>9</td>
                                 <td>Hepatite A</td>
                                 <td>Hepatite A</td>
-                                <td>{contador}</td>
+                                <td>{counter9}</td>
                             </tr>
 
                             <tr>
                                 <td>10</td>
                                 <td>DTP</td>
                                 <td>Difteria, tétano e coqueluche</td>
-                                <td>{contador}</td>
+                                <td>{counter10}</td>
                             </tr>
 
                             <tr>
                                 <td>11</td>
                                 <td>Varicela</td>
                                 <td>Catapora</td>
-                                <td>{contador}</td>
+                                <td>{counter11}</td>
                             </tr>
 
                             <tr>
                                 <td>12</td>
                                 <td>Febre amarela</td>
                                 <td>Febre amarela</td>
-                                <td>{contador}</td>
+                                <td>{counter12}</td>
                             </tr>
 
                             <tr>
                                 <td>13</td>
                                 <td>HPV</td>
                                 <td>HPV</td>
-                                <td>{contador}</td>
+                                <td>{counter13}</td>
                             </tr>
 
                             <tr>
                                 <td>14</td>
                                 <td>Hepatite B</td>
                                 <td>Hepatite B</td>
-                                <td>{contador}</td>
+                                <td>{counter14}</td>
                             </tr>
 
                             <tr>
                                 <td>15</td>
                                 <td>Tríplice viral</td>
                                 <td>Sarampo, caxumba e rubéola</td>
-                                <td>{contador}</td>
+                                <td>{counter15}</td>
                             </tr>
 
                             <tr>
                                 <td>16</td>
                                 <td>Tríplice viral</td>
                                 <td>Sarampo, caxumba e rubéola</td>
-                                <td>{contador}</td>
+                                <td>{counter16}</td>
                             </tr>
 
                             <tr>
                                 <td>17</td>
                                 <td>Dupla adulto</td>
                                 <td>Difteria e tétano</td>
-                                <td>{contador}</td>
+                                <td>{counter17}</td>
                             </tr>
 
                             <tr>
                                 <td>18</td>
                                 <td>Influenza</td>
                                 <td>Gripe</td>
-                                <td>{contador}</td>
+                                <td>{counter18}</td>
                             </tr>
                         </tbody>
                     </table>
