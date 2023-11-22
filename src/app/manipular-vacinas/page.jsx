@@ -1,6 +1,19 @@
 import Link from 'next/link'
+import React, { useState } from 'react';
+// import ModalDesejo from './ModalDesejo';
+// import './ModalDesejo.css'
 
 export default function ManipularVacinas() {
+    // const [modalOpen, setModalOpen] = useState(false);
+
+    // const handleButtonClick = () => {
+    //     setModalOpen(true);
+    // }
+
+    // const handleCloseModal = () => {
+    //     setModalOpen(false);
+    // }
+
     return (
         <>
             <div className='cabecalhoConhecer'>
@@ -12,7 +25,11 @@ export default function ManipularVacinas() {
 
             <h2 className='subtitulo'>ImunoCheck</h2>
 
-            <p className='texto2'>Clique na linha da vacina para inserir, excluir ou alterar uma informação: </p>
+            <p className='texto2'>Clique no botão para para inserir, excluir ou alterar uma informação: </p>
+
+            <button type='submit'>Check</button>
+
+            {/* <ModalDesejo open={modalOpen} onClose={handleCloseModal}/> */}
 
             <table className='tabela'>
                 <thead>
