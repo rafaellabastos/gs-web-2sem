@@ -1,4 +1,3 @@
-"use client";
 import "./ModalInserir.scss";
 import { useState } from "react";
 
