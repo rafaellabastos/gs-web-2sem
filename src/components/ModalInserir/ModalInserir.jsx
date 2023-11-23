@@ -9,13 +9,17 @@ export default function ModalInserir({ setOpen }) {
                         <span className="fecharModal" onClick={() => setIsOpen(false)}>&times;</span>
                         <h1 className="tituloModal">Inserir status</h1>
 
+                        <br/><div>
+                            <label htmlFor="idVacina" className="subtituloInserir">ID da vacina:</label><br/>
+                            <input type="text" id="idVacina" className="inputInserir"/>
+                        </div>
+
                         <div>
-                            <label htmlFor="state">Você já tomou?</label><br/>
-                            <select id="state" className='opcoesEstado'>
+                            <label htmlFor="status" className="subtituloInserir">Você já tomou?</label><br/>
+                            <select id="status" className='inputInserir'>
                                 <option value="">Escolha uma resposta</option>
-                                {estados.map(estado => (
-                                <option key={estado.nome} value={estado.nome}>{estado.nome}</option>
-                            ))}
+                                <option value="sim">Sim</option>
+                                <option value="nao">Não</option>
                             </select>
                         </div>
 

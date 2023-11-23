@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./ModalDesejo.css"
+import "./ModalDesejo.scss"
 
 export default function ModalDesejo({ setOpen }) {
     const [isOpen, setIsOpen] = useState(true);
