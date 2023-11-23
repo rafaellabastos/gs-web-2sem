@@ -1,5 +1,4 @@
 import "./ModalInserir.scss";
-import { useState } from "react";
 
 export default function ModalInserir({ isOpen, setOpen }) {
     return (

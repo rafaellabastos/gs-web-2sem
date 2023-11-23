@@ -1,5 +1,4 @@
 import "./ModalAlterar.scss";
-import { useState } from "react";
 
 export default function ModalAlterar({ isOpen, setOpen }) {
     return (

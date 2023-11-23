@@ -1,5 +1,4 @@
 import "./ModalExcluir.scss";
-import { useState } from "react";
 
 export default function ModalExcluir({ isOpen, setOpen }) {
     return (
