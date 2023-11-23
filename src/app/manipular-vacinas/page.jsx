@@ -27,7 +27,7 @@ export default function ManipularVacinas() {
 
             <button type='submit' className='escolherDesejo' onClick={handleCheckButtonClick}>Check</button>
 
-            {isModalDesejoOpen && <ModalDesejo setOpen={setIsModalDesejoOpen}></ModalDesejo>}
+            {isModalDesejoOpen && <ModalDesejo setOpenModalDesejo={setIsModalDesejoOpen}></ModalDesejo>}
 
             <table className='tabela'>
                 <thead>
