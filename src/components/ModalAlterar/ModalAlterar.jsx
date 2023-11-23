@@ -1,15 +1,13 @@
 import "./ModalAlterar.scss";
 import { useState } from "react";
 
-export default function ModalAlterar({ setOpen }) {
-    const [isOpen, setIsOpen] = useState(true);
-
+export default function ModalAlterar({ isOpen, setOpen }) {
     return (
         <>
             {isOpen && (
                 <div className="modalOverlay">
                     <div className="caixaAlterar">
-                        <span className="fecharModal" onClick={() => setIsOpen(false)}>&times;</span>
+                        <span className="fecharModal" onClick={() => setOpen(false)}>&times;</span>
                         <h1 className="tituloModal">Alterar status</h1>
                         
                         <br/><div>

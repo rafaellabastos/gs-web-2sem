@@ -1,15 +1,13 @@
 import "./ModalExcluir.scss";
 import { useState } from "react";
 
-export default function ModalExcluir({ setOpen }) {
-    const [isOpen, setIsOpen] = useState(true);
-
+export default function ModalExcluir({ isOpen, setOpen }) {
     return (
         <>
             {isOpen && (
                 <div className="modalOverlay">
                     <div className="caixaExcluir">
-                        <span className="fecharModal" onClick={() => setIsOpen(false)}>&times;</span>
+                        <span className="fecharModal" onClick={() => setOpen(false)}>&times;</span>
                         <h1 className="tituloModal">Excluir status</h1>
                         
                         <br/><div>

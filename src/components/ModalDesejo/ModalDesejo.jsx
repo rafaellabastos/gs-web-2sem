@@ -9,20 +9,27 @@ export default function ModalDesejo({ setOpenModalDesejo }) {
     const [isExcluirOpen, setIsExcluirOpen] = useState(false);
     const [isAlterarOpen, setIsAlterarOpen] = useState(false);
 
+    //Botão de inserir
     const handleInserirButtonClick = () => {
         setIsInserirOpen(true); 
     }
 
+    //Botão de excluir
     const handleExcluirButtonClick = () => {
         setIsExcluirOpen(true);
     }
 
+    //Botão de alterar
     const handleAlterarButtonClick = () => {
         setIsAlterarOpen(true);
     }
 
+    //Botão de fechar
     const handleCloseModal = () => {
         setOpenModalDesejo(false);
+        setIsInserirOpen(false);
+        setIsExcluirOpen(false);
+        setIsAlterarOpen(false);
     }
     
     return (
@@ -38,15 +45,15 @@ export default function ModalDesejo({ setOpenModalDesejo }) {
             </div>
 
             {isInserirOpen && (
-                <ModalInserir setOpen={() => setIsInserirOpen(false)}/>
+                <ModalInserir isOpen={isInserirOpen} setOpen={() => setIsInserirOpen(false)}/>
             )}
 
             {isExcluirOpen && (
-                <ModalExcluir setOpen={() => setIsExcluirOpen(false)}/>
+                <ModalExcluir isOpen={isExcluirOpen} setOpen={() => setIsExcluirOpen(false)}/>
             )}
 
             {isAlterarOpen && (
-                <ModalAlterar setOpen={() => setIsAlterarOpen(false)}/>
+                <ModalAlterar isOpen={isAlterarOpen} setOpen={() => setIsAlterarOpen(false)}/>
             )}
         </>
     )
