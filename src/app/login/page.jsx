@@ -17,8 +17,10 @@ export default function Login() {
         .then((resp) => {
             const usuarioCadastrado = resp;
             if (usuarioCadastrado.find((userCadastrado) => userCadastrado.usuario === usuario && userCadastrado.senha === senha)) {
+                const usuario = usuarioCadastrado.map((userCadastrado) => userCadastrado.usuario)
                 setAlerta("Usuário encontrado!");
                 console.log(usuarioCadastrado)
+                sessionStorage.setItem("user", JSON.stringify(usuario))
             } else {
                 setAlerta("Usuário e/ou senha incorretos!");
             }

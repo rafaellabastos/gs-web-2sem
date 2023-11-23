@@ -45,9 +45,23 @@ export default function Cadastro() {
         else{
             console.log("Erro ao cadastrar")
         }
+        handleSubmitLocal(e)
         } catch (error) {
             console.log("Erro ao cadastrar: " + error)
         }
+    }
+
+    const handleSubmitLocal = async (e) => {
+        e.preventDefault()
+        const response = await fetch(`http://localhost:3000/dados/usuarios-api`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(novoCadastro)
+        })
+        const result = await response.json();
+        console.log(result)
     }
     return (
         <>
