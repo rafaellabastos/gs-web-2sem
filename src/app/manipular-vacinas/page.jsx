@@ -6,10 +6,10 @@ import { useState } from 'react';
 
 export default function ManipularVacinas() {
 
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isModalDesejoOpen, setIsModalDesejoOpen] = useState(false);
 
     const handleCheckButtonClick = () => {
-        setIsModalOpen(true);
+        setIsModalDesejoOpen(true);
     }
 
     return (
@@ -27,7 +27,7 @@ export default function ManipularVacinas() {
 
             <button type='submit' className='escolherDesejo' onClick={handleCheckButtonClick}>Check</button>
 
-            {isModalOpen && <ModalDesejo setOpen={setIsModalOpen}></ModalDesejo>}
+            {isModalDesejoOpen && <ModalDesejo setOpen={setIsModalDesejoOpen}></ModalDesejo>}
 
             <table className='tabela'>
                 <thead>

@@ -1,3 +1,7 @@
+"use client";
+import "./ModalInserir.scss";
+import { useState } from "react";
+
 export default function ModalInserir({ setOpen }) {
     const [isOpen, setIsOpen] = useState(true);
 
@@ -8,7 +12,7 @@ export default function ModalInserir({ setOpen }) {
                     <div className="caixaInserir">
                         <span className="fecharModal" onClick={() => setIsOpen(false)}>&times;</span>
                         <h1 className="tituloModal">Inserir status</h1>
-
+                        
                         <br/><div>
                             <label htmlFor="idVacina" className="subtituloInserir">ID da vacina:</label><br/>
                             <input type="text" id="idVacina" className="inputInserir"/>
