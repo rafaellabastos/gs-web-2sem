@@ -2,10 +2,12 @@ import { useState } from "react";
 import "./ModalDesejo.scss"
 import ModalInserir from "../ModalInserir/ModalInserir";
 import ModalExcluir from "../ModalExcluir/ModalExcluir";
+import ModalAlterar from "../ModalAlterar/ModalAlterar";
 
 export default function ModalDesejo({ setOpenModalDesejo }) {
     const [isInserirOpen, setIsInserirOpen] = useState(false);
     const [isExcluirOpen, setIsExcluirOpen] = useState(false);
+    const [isAlterarOpen, setIsAlterarOpen] = useState(false);
 
     const handleInserirButtonClick = () => {
         setIsInserirOpen(true); 
@@ -13,6 +15,10 @@ export default function ModalDesejo({ setOpenModalDesejo }) {
 
     const handleExcluirButtonClick = () => {
         setIsExcluirOpen(true);
+    }
+
+    const handleAlterarButtonClick = () => {
+        setIsAlterarOpen(true);
     }
 
     const handleCloseModal = () => {
@@ -27,7 +33,7 @@ export default function ModalDesejo({ setOpenModalDesejo }) {
                     <h1 className="tituloModal">O que você deseja fazer?</h1>
                     <button className="botaoDesejo" onClick={handleInserirButtonClick}>Inserir status</button>
                     <button className="botaoDesejo" onClick={handleExcluirButtonClick}>Excluir status</button>
-                    <button className="botaoDesejo">Fazer alteração</button>
+                    <button className="botaoDesejo" onClick={handleAlterarButtonClick}>Fazer alteração</button>
                 </div>
             </div>
 
@@ -37,6 +43,10 @@ export default function ModalDesejo({ setOpenModalDesejo }) {
 
             {isExcluirOpen && (
                 <ModalExcluir setOpen={() => setIsExcluirOpen(false)}/>
+            )}
+
+            {isAlterarOpen && (
+                <ModalAlterar setOpen={() => setIsAlterarOpen(false)}/>
             )}
         </>
     )
