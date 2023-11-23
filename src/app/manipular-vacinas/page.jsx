@@ -6,6 +6,8 @@ import { useState } from 'react';
 export default function ManipularVacinas() {
     const verificaLogin = sessionStorage.getItem("user")
     console.log(verificaLogin)
+    const verificaEstado = sessionStorage.getItem("estado")
+    console.log(verificaEstado)
     if (verificaLogin === null){
         window.location.href = "/login"
     }

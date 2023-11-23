@@ -41,6 +41,7 @@ export default function Cadastro() {
         })
         if (response.ok){
             console.log("Cadastrado com sucesso!")
+            console.log(novoCadastro)
         }
         else{
             console.log("Erro ao cadastrar")
