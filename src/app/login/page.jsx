@@ -21,6 +21,7 @@ export default function Login() {
                 setAlerta("Usuário encontrado!");
                 console.log(usuarioCadastrado)
                 sessionStorage.setItem("user", JSON.stringify(usuario))
+                window.location.href = '/manipular-vacinas'
             } else {
                 setAlerta("Usuário e/ou senha incorretos!");
             }

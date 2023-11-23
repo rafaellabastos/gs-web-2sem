@@ -4,6 +4,11 @@ import ModalDesejo from '../../components/ModalDesejo/ModalDesejo';
 import { useState } from 'react';
 
 export default function ManipularVacinas() {
+    const verificaLogin = sessionStorage.getItem("user")
+    console.log(verificaLogin)
+    if (verificaLogin === null){
+        window.location.href = "/login"
+    }
 
     const [isModalDesejoOpen, setIsModalDesejoOpen] = useState(false);
 
