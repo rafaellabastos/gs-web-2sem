@@ -7,25 +7,26 @@ export default function ModalInserir({ isOpen, setOpen }) {
         const usuario = usuarioCadastrado.replace(/^\["|"\]$/g, '')
         const estadoCadastrado = sessionStorage.getItem("estado")
         const estado = estadoCadastrado.replace(/^\["|"\]$/g, '')
-        const [id, setId] = useState(0)
-        const [status, setStatus] = useState("")
         const [dadosVacinado, setDadosVacinado] = useState({
-            usuarioVac: "",
-            estadoVac: "",
+            usuarioVac: usuario,
+            estadoVac: estado,
             id: 0,
             statusVac: "",
         })
 
-        const handleChange = (() => {
+        const handleChangeId= ((e) => {
             setDadosVacinado((prevDados) => ({
                 ...prevDados,
-                usuarioVac: usuario,
-                estadoVac: estado,
-                id: id,
-                statusVac: status,
+                id: e.target.value,
             }))
             console.log(dadosVacinado)
-            console.log(status)
+        })
+        const handleChangeStt = ((event) => {
+            setDadosVacinado((prevDados) => ({
+                ...prevDados,
+                statusVac: event.target.value,
+            }))
+            console.log(dadosVacinado)
         })
 
         const handleSubmit = (async (e) => {
@@ -40,7 +41,7 @@ export default function ModalInserir({ isOpen, setOpen }) {
             })
             if (response.ok){
                 console.log("Inserido com sucesso!")
-                setOpen(false)
+                window.location.href("/manipular-vacinas")
             }
             else{
                 console.log("Erro ao inserir")
@@ -72,15 +73,15 @@ export default function ModalInserir({ isOpen, setOpen }) {
                         <span className="fecharModal" onClick={() => setOpen(false)}>&times;</span>
                         <h1 className="tituloModal">Inserir status</h1>
                         
-                        <form onChange={handleChange}>
+                        <form>
                                 <br/><div>
                                 <label htmlFor="idVacina" className="subtituloInserir">ID da vacina:</label><br/>
-                                <input type="text" id="idVacina" className="inputInserir" onChange={(e) => setId(e.target.value)}/>
+                                <input type="text" id="idVacina" className="inputInserir" onChange={handleChangeId}/>
                             </div>
 
                             <div>
                                 <label htmlFor="status" className="subtituloInserir">Você já tomou?</label><br/>
-                                <select id="status" className='inputInserir' onChange={(e) => setStatus(e.target.value)}>
+                                <select id="status" className='inputInserir' onChange={handleChangeStt}>
                                     <option value="">Escolha uma resposta</option>
                                     <option value="sim">Sim</option>
                                     <option value="nao">Não</option>
