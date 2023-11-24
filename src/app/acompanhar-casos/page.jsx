@@ -37,7 +37,7 @@
             .then((resp) => {
                 const tabelaVac = resp;
                 console.log(tabelaVac)
-                const dadosVac1= tabelaVac.filter(item => item.estadoVac === estado && item.id === 1 && item.statusVac === 'Sim')
+                const dadosVac1= tabelaVac.filter(item => item.estadoVac === estado && item.id === 1 && item.statusVac === 'Sim' )
                 setCounter1(dadosVac1.length)
                 const dadosVac2 = tabelaVac.filter(item => item.estadoVac === estado && item.id === 2 && item.statusVac === 'Sim')
                 setCounter2 (dadosVac2.length)
