@@ -39,6 +39,7 @@ export default function ModalAlterar({ isOpen, setOpen }) {
             })
             if (response.ok){
                 console.log("Alterado com sucesso!")
+                window.location.reload()
                 setOpen(false)
             }
             else{

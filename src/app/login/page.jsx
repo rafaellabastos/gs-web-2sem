@@ -7,8 +7,42 @@ export default function Login() {
     const [senha, setSenha] = useState("");
     const [alerta, setAlerta] = useState("")
 
+
+    const handleSubmitLocal = async (e, usuariosVac) => {
+        try {
+            const response = await fetch(`http://localhost:3000/dados/vacinacao-api`, {
+                method: "post",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(usuariosVac),
+            });
+            
+            if (response.ok) {
+                const result = await response.json();
+                console.log(result);
+            } else {
+                console.error("Erro na requisição local:", response.statusText);
+            }
+        } catch (error) {
+            console.error("Erro ao processar a requisição local:", error);
+        }
+    }
+
+    const getAllVac = (e) => {
+        e.preventDefault()
+        fetch(`http://localhost:8080/imunocheck/vacinas`, {
+            method: "get"
+        }).then((resp) => resp.json()).then((resp) => {
+            const usuariosVac = resp
+            sessionStorage.setItem("usuarios", JSON.stringify(usuariosVac))
+            handleSubmitLocal(e, usuariosVac)
+        })
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        sessionStorage.clear()
 
         fetch(`http://localhost:8080/imunocheck/${usuario}`, {
             method: "get"
@@ -22,7 +56,8 @@ export default function Login() {
                 const usuario = usuarioCadastrado.map((userCadastrado) => userCadastrado.usuario)
                 setAlerta("Usuário encontrado!");
                 console.log(usuarioCadastrado)
-                sessionStorage.setItem("user", JSON.stringify(usuario))
+                sessionStorage.setItem("user", usuario)
+                getAllVac(e)
                 window.location.href = '/manipular-vacinas'
             } else {
                 setAlerta("Usuário e/ou senha incorretos!");

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import "./ModalInserir.scss";
 
+
 export default function ModalInserir({ isOpen, setOpen }) {
         const usuarioCadastrado = sessionStorage.getItem("user")
         const usuario = usuarioCadastrado.replace(/^\["|"\]$/g, '')
@@ -41,28 +42,39 @@ export default function ModalInserir({ isOpen, setOpen }) {
             })
             if (response.ok){
                 console.log("Inserido com sucesso!")
-                window.location.href("/manipular-vacinas")
+                window.location.reload()
+                setOpen(false) 
+                handleSubmitLocal(e)
             }
             else{
                 console.log("Erro ao inserir")
+                console.log("Erro na requisição local:", response.statusText);
             }
             } catch (error) {
-                console.log("Erro ao inserir: " + error)
+                console.error("Erro ao inserir: " + error)
             }
-            handleSubmitLocal(e)
+           
         })
 
         const handleSubmitLocal = async (e) => {
-            e.preventDefault()
-            const response = await fetch(`http://localhost:3000/dados/vacinacao-api`, {
-                method: "post",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(dadosVacinado)
-            })
-            const result = await response.json();
-            console.log(result)
+            try {
+                const response = await fetch(`http://localhost:3000/dados/vacinacao-api`, {
+                    method: "post",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify(dadosVacinado),
+                });
+                
+                if (response.ok) {
+                    const result = await response.json();
+                    console.log(result);
+                } else {
+                    console.error("Erro na requisição local:", response.statusText);
+                }
+            } catch (error) {
+                console.error("Erro ao processar a requisição local:", error);
+            }
         }
 
     return (
