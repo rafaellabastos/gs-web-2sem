@@ -41,7 +41,7 @@ export default function Cadastro() {
         if (response.ok){
             console.log("Cadastrado com sucesso!")
             console.log(novoCadastro)
-            window.location.href("/")
+            window.location.href = "/"
         }
         else{
             console.log("Erro ao cadastrar")

@@ -35,7 +35,7 @@ export default function ManipularVacinas() {
                     return;
                 }
 
-                const response = await fetch(`http://localhost:3000/dados/vacinacao-api`, {
+                const response = await fetch(`http://localhost:8080/imunocheck/vacinas`, {
                     method: "get"
                 });
 
@@ -46,14 +46,15 @@ export default function ManipularVacinas() {
 
                 const tabelaUsuarios = await response.json();
                 console.log(tabelaUsuarios)
-                const vacina1 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '1');
+                localStorage.setItem("usuarios", tabelaUsuarios)
+                const vacina1 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 1);
                 if (vacina1.length > 0) {
                     setStatus1(vacina1[0].statusVac);
                 }
                 else{
                     setStatus1("Não informado")
                 }
-                const vacina2 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '2');
+                const vacina2 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 2);
                 setStatus2(vacina2.statusVac);
                 if (vacina2.length > 0) {
                     setStatus2(vacina2[0].statusVac);
@@ -61,7 +62,7 @@ export default function ManipularVacinas() {
                 else{
                     setStatus2("Não informado")
                 }
-                const vacina3 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '3');
+                const vacina3 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 3);
                 setStatus3(vacina3.statusVac);
                 if (vacina3.length > 0) {
                     setStatus3(vacina3[0].statusVac);
@@ -69,91 +70,91 @@ export default function ManipularVacinas() {
                 else{
                     setStatus3("Não informado")
                 }
-                const vacina4 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '4');
+                const vacina4 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 4);
                 if (vacina4.length > 0) {
                     setStatus4(vacina4[0].statusVac);
                 } else {
                     setStatus4("Não informado");
                 }
-                const vacina5 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '5');
+                const vacina5 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 5);
                 if (vacina5.length > 0) {
                     setStatus5(vacina5[0].statusVac);
                 } else {
                     setStatus5("Não informado");
                 }
-                const vacina6 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '6');
+                const vacina6 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 6);
                 if (vacina6.length > 0) {
                     setStatus6(vacina6[0].statusVac);
                 } else {
                     setStatus6("Não informado");
                 }
-                const vacina7 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '7');
+                const vacina7 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 7);
                 if (vacina7.length > 0) {
                     setStatus7(vacina7[0].statusVac);
                 } else {
                     setStatus7("Não informado");
                 }
-                const vacina8 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '8');
+                const vacina8 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 8);
                 if (vacina8.length > 0) {
                     setStatus8(vacina8[0].statusVac);
                 } else {
                     setStatus8("Não informado");
                 }
-                const vacina9 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '9');
+                const vacina9 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 9);
                 if (vacina9.length > 0) {
                     setStatus9(vacina9[0].statusVac);
                 } else {
                     setStatus9("Não informado");
                 }
-                const vacina10 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '10');
+                const vacina10 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 10);
                 if (vacina10.length > 0) {
                     setStatus10(vacina10[0].statusVac);
                 } else {
                     setStatus10("Não informado");
                 }
-                const vacina11 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '11');
+                const vacina11 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 11);
                 if (vacina11.length > 0) {
                     setStatus11(vacina11[0].statusVac);
                 } else {
                     setStatus11("Não informado");
                 }
-                const vacina12 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '12');
+                const vacina12 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 12);
                 if (vacina12.length > 0) {
                     setStatus12(vacina12[0].statusVac);
                 } else {
                     setStatus12("Não informado");
                 }
-                const vacina13 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '13');
+                const vacina13 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 13);
                 if (vacina13.length > 0) {
                     setStatus13(vacina13[0].statusVac);
                 } else {
                     setStatus13("Não informado");
                 }
-                const vacina14 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '14');
+                const vacina14 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 14);
                 if (vacina14.length > 0) {
                     setStatus14(vacina14[0].statusVac);
                 } else {
                     setStatus14("Não informado");
                 }
-                const vacina15 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '15');
+                const vacina15 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 15);
                 if (vacina15.length > 0) {
                     setStatus15(vacina15[0].statusVac);
                 } else {
                     setStatus15("Não informado");
                 }
-                const vacina16 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '16');
+                const vacina16 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 16);
                 if (vacina16.length > 0) {
                     setStatus16(vacina16[0].statusVac);
                 } else {
                     setStatus16("Não informado");
                 }
-                const vacina17 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '17');
+                const vacina17 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 17);
                 if (vacina17.length > 0) {
                     setStatus17(vacina17[0].statusVac);
                 } else {
                     setStatus17("Não informado");
                 }
-                const vacina18 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === '18');
+                const vacina18 = tabelaUsuarios.filter(item => item.usuarioVac === usuario && item.id === 18);
                 if (vacina18.length > 0) {
                     setStatus18(vacina18[0].statusVac);
                 } else {
