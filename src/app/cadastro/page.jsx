@@ -1,7 +1,6 @@
 "use client"
 import Link from 'next/link';
 import { useState } from 'react';
-import { headers } from '../../../next.config';
 
 export default function Cadastro() {
     const [nomeCompleto, setNomeCompleto] = useState("");
@@ -41,13 +40,29 @@ export default function Cadastro() {
         })
         if (response.ok){
             console.log("Cadastrado com sucesso!")
+            console.log(novoCadastro)
+            window.location.href = "/"
         }
         else{
             console.log("Erro ao cadastrar")
         }
+        handleSubmitLocal(e)
         } catch (error) {
             console.log("Erro ao cadastrar: " + error)
         }
+    }
+
+    const handleSubmitLocal = async (e) => {
+        e.preventDefault()
+        const response = await fetch(`http://localhost:3000/dados/usuarios-api`, {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(novoCadastro)
+        })
+        const result = await response.json();
+        console.log(result)
     }
     return (
         <>

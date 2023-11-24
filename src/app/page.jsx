@@ -12,7 +12,7 @@ export default function Home() {
 
       <div className='grupoVacina'>
           <div className='cardVacina'>
-            <Link href='/login'>Venha ter um controle vacinal</Link>
+            <Link href='/manipular-vacinas'>Venha ter um controle vacinal</Link>
           </div>
       </div>
 
