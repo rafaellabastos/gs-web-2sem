@@ -19,7 +19,6 @@ export default function ModalExcluir({ isOpen, setOpen }) {
         if (response.ok){
             console.log("Deletado com sucesso!")
             sessionStorage.setItem("id", id)
-            getAllVac(e)
             window.location.reload()
             setOpen(false)
         }
