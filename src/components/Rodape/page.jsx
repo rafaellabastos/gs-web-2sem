@@ -9,7 +9,7 @@ export default function Rodape() {
                 <p>Igor Ribeiro Anccilotto - 550415 - Suporte Técnico  |  Luiz Fillipe Farias - 99519 - Gerente de projetos</p>
                 <p>Rafaella Monique do Carmo Bastos - 552425 - Arquiteta de software</p>
             </div>
-            {/* Informação adicional, se necessário */}
+            {/* Informação sobre a turma */}
             <p>1TDSPL</p>
         </div>
     );
